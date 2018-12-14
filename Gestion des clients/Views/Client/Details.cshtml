@@ -1,0 +1,43 @@
+﻿@model Gestion_des_clients.Models.Client
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Client</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.code_client)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.code_client)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nom_client)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nom_client)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.raison_social)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.raison_social)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
